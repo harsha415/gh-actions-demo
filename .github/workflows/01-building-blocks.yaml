@@ -1,0 +1,19 @@
+name: 01 - Building Blocks
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Type something
+              run: echo "Hello world"
+    second-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step to Fail
+              run: |
+                echo "THis is to Fail soemthing"
+                exit 1
+            - name: Step to check if failure works. This should not run
+              run: echo "This should not RUN"
