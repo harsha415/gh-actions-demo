@@ -1,6 +1,11 @@
 name: 02 - workflow events demo
 
-on: push
+on: 
+    push:
+    pull_request:
+    schedule:
+        - cron: "30 17 10 * *"
+    workflow_dispatch: # This is a Manual Trigger. This enables us to Trigger workflow from the UI
 
 jobs:
     job_name:
