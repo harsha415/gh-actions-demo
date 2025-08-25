@@ -12,3 +12,11 @@ jobs:
               run: |
                 echo "This is running on Ubuntu Default Runner"
                 echo "Runner OS: $RUNNER_OS"
+    windows_runner:
+        runs-on: windows-latest # Note that this is windows machine. So Linux commands may not work
+        steps:
+            - name: Show OS for windows
+              shell: bash # This allows us to add a BASH Shell so that we can run Linux Commands
+              run: |
+                echo "This is running on Windows Default Runner"
+                echo "Runner OS: $RUNNER_OS"
