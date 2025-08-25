@@ -15,5 +15,5 @@ jobs:
               run: |
                 echo "This one will succeed"
                 exit 0
-            - name: Step to check if failure works. This should not run
-              run: echo "This should not RUN"
+            - name: Only Runs if Previous step succeeds
+              run: echo "This should only RUN if previous steps succeed"
