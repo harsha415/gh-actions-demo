@@ -1,0 +1,12 @@
+name: Using Actions
+on: push
+
+jobs:
+    build-react-app:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Current Code
+              uses: actions/checkout@v5
+            - name: Printing the directory structure
+              run: |
+                ls -ltr
