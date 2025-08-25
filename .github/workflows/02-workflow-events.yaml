@@ -1,0 +1,11 @@
+name: 02 - workflow events demo
+
+on: push
+
+jobs:
+    job_name:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show the Trigger
+              run: echo "Triggered by the event:- ${{ github.event_name }}"
+          
