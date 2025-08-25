@@ -1,0 +1,14 @@
+name: Runner workflow demo
+
+on: workflow_dispatch
+
+jobs:
+    ubuntu-runner:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show OS on Ubuntu Default runner
+              # https://docs.github.com/en/actions/reference/workflows-and-actions/variables#default-environment-variables
+              # Refer to this for default ENV variables available on GitHub Runners
+              run: |
+                echo "This is running on Ubuntu Default Runner"
+                echo "Runner OS: $RUNNER_OS"
